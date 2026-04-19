@@ -1,0 +1,14 @@
+:root{
+    --color-primary-- : #fff;
+    --color-secondary-- : #02EEFE;
+    --background-color-primary-- :#20242D;
+    --background-color-secondary--:#323846;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    font-family: inter, Arial, Helvetica, sans-serif;
+}
