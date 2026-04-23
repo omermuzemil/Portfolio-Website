@@ -113,8 +113,6 @@ nav a{
         width: auto;
         display: flex;
         font-size: 1.6rem;
-        /* opacity: 1;
-        max-height: 100%; */
     }
 
     .collapsible-content{
@@ -141,21 +139,21 @@ nav a{
 }
 
 h1{
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 800;
     padding: .2rem 0;
     margin: 0;
 }
 
 h2{
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 800;
     padding: .2rem 0;
     margin: 0;
 }
 
 h3{
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-weight: 700;
     padding: 0.2rem 0;
     margin: 0;
@@ -163,7 +161,7 @@ h3{
 }
 
 h4{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 600;
     margin: 0;
 }
@@ -171,6 +169,7 @@ h4{
 .texts p{
     padding: 1.5rem 0;
     margin: 0;
+    font-size: 1.2rem;
 }
 
 h3 span{
@@ -217,7 +216,37 @@ h3 span{
     box-shadow: 0 0 3px 1px var(--color-secondary--);
 }
 
-/* @media (max-width: 576px) { } */
+/* Person Images */
+.page-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.page-images img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Media query for first page */
+@media (min-width: 676px) { 
+    .home{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav{
+        padding: 0;
+    }
+
+    .page-images img{
+        min-width: 400px;
+    }
+}
 
 @media screen and (min-width: 768px) {
     .texts, .icons, .page-button{
