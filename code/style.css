@@ -14,6 +14,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: inter, Arial, Helvetica, sans-serif;
+    background: var(--background-color-primary--);
 }
 
 /* Navigation Bar */
@@ -61,7 +62,7 @@ nav a{
     color: var(--color-secondary--);
 }
 
-.icon{
+.nav-icon{
     width: 30px;
     height: 30px;
     margin: 1rem;
@@ -176,10 +177,50 @@ h3 span{
     color: var(--color-secondary--);
 }
 
+/* Icons */
+.icons{
+    background: var(--background-color-primary--);
+    padding: 0.3rem 0 0.7rem 1.5rem;
+}
+
+.page-icon{
+    color: var(--color-secondary--);
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.circled-icon{
+    border: 1.5px solid var(--color-secondary--);
+    background: var(--background-color-primary--);
+    border-radius: 50%;
+    margin: 0 0.3rem;
+}
+
+/* Buttons */
+.page-button{
+    background: var(--background-color-primary--);
+    padding: 0.8rem 1.5rem;
+}
+
+.page-button .button{
+    width: 100px;
+    background-color: var(--color-secondary--);
+    color: var(--background-color-primary--);
+    border: none;
+    border-radius: 24px;
+    padding: 1.2rem 0;
+    font-size: 10px;
+    letter-spacing: .5px;
+    cursor: pointer;
+    box-shadow: 0 0 3px 1px var(--color-secondary--);
+}
+
 /* @media (max-width: 576px) { } */
 
 @media screen and (min-width: 768px) {
-    .texts{
-        padding: 0 6rem;
+    .texts, .icons, .page-button{
+        padding-left: 6rem;
     }
 }
