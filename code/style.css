@@ -17,6 +17,18 @@ body{
     background: var(--background-color-primary--);
 }
 
+.home{
+    background: var(--background-color-primary--);
+    width: 100%;
+    height: 100%;
+}
+
+.about{
+    background: var(--background-color-secondary--);
+    width: 100%;
+    height: 100%;
+}
+
 /* Navigation Bar */
 nav{
     display: flex;
@@ -133,7 +145,6 @@ nav a{
 /* Typography */
 .texts{
     padding: 0 1.5rem;
-    background: var(--background-color-primary--);
     color: var(--color-primary--);
     margin: 0;
 }
@@ -172,7 +183,7 @@ h4{
     font-size: 1.2rem;
 }
 
-h3 span{
+h2 span, h3 span{
     color: var(--color-secondary--);
 }
 
@@ -199,7 +210,6 @@ h3 span{
 
 /* Buttons */
 .page-button{
-    background: var(--background-color-primary--);
     padding: 0.8rem 1.5rem;
 }
 
@@ -216,12 +226,16 @@ h3 span{
     box-shadow: 0 0 3px 1px var(--color-secondary--);
 }
 
+/* .page-button .card-button{
+    width: 80px;
+    padding: 1.2rem 0;
+} */
+
 /* Person Images */
 .page-images{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .page-images img{
@@ -229,11 +243,12 @@ h3 span{
     max-width: 400px;
     height: auto;
     object-fit: contain;
+    padding: 1rem 0 0 1.5rem;
 }
 
 /* Media query for first page */
 @media (min-width: 676px) { 
-    .home{
+    .pages{
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -249,7 +264,7 @@ h3 span{
 }
 
 @media screen and (min-width: 768px) {
-    .texts, .icons, .page-button{
+    .home .texts, .icons, .home .page-button, .page-images img{
         padding-left: 6rem;
     }
 }
