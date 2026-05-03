@@ -5,6 +5,10 @@
     --background-color-secondary--:#323846;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 html {
     /* 62.5% of 16px = 10px */
     font-size: 62.5%;
@@ -15,19 +19,29 @@ body{
     padding: 0;
     font-family: inter, Arial, Helvetica, sans-serif;
     background: var(--background-color-primary--);
+    overflow-x: hidden;
 }
 
 .home{
     background: var(--background-color-primary--);
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 .about{
     background: var(--background-color-secondary--);
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
+
+.services{
+    position: relative;
+    display: grid;
+    height: 100%;
+    place-items: center;
+}
+
+
 
 /* Navigation Bar */
 nav{
@@ -38,6 +52,7 @@ nav{
     min-height: 5rem;
     background: var(--background-color-primary--);
     padding: 0 0 5rem 0;
+    /* position: fixed; */
 }
 
 nav a{
@@ -142,6 +157,12 @@ nav a{
     }
 }
 
+/* @media screen and (max-width: 768px) {
+    .home, .about .first-half{
+        padding-left: 1.2rem;
+    }
+} */
+
 /* Typography */
 .texts{
     padding: 0 1.5rem;
@@ -150,54 +171,64 @@ nav a{
 }
 
 h1{
-    font-size: 3rem;
-    font-weight: 800;
+    font-size: 3.2rem;
+    font-weight: 900;
     padding: .2rem 0;
     margin: 0;
 }
 
 h2{
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 800;
     padding: .2rem 0;
     margin: 0;
 }
 
 h3{
-    font-size: 2rem;
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+h4{
+    font-size: 1.8rem;
     font-weight: 700;
     padding: 0.2rem 0;
     margin: 0;
     border: none;
 }
 
-h4{
-    font-size: 1.6rem;
-    font-weight: 600;
-    margin: 0;
+h1, h2, h3, h4, p{
+    color: var(--color-primary--);
 }
-
 .texts p{
     padding: 1.5rem 0;
     margin: 0;
     font-size: 1.2rem;
 }
 
-h2 span, h3 span{
+.cards p{
+    font-size: 1.3rem;
+    padding: 0 1.5rem;
+    text-align: center;
+    line-height: 2rem;
+}
+
+h2 span, h3 span, h4 span{
     color: var(--color-secondary--);
 }
 
 /* Icons */
-.icons{
+.home .icons{
     background: var(--background-color-primary--);
-    padding: 0.3rem 0 0.7rem 1.5rem;
+    padding: 0.3rem 0 0.7rem 0;
 }
 
 .page-icon{
     color: var(--color-secondary--);
     width: 15px;
     height: 15px;
-    padding: 5px;
+    /* padding: 5px; */
     cursor: pointer;
 }
 
@@ -208,19 +239,28 @@ h2 span, h3 span{
     margin: 0 0.3rem;
 }
 
+.card-icon{
+    width: 40px;
+    height: 40px;
+}
+
 /* Buttons */
 .page-button{
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 0;
+}
+
+.about-button{
+    padding: 0;
 }
 
 .page-button .button{
-    width: 100px;
+    /* width: 100px; */
     background-color: var(--color-secondary--);
     color: var(--background-color-primary--);
     border: none;
     border-radius: 24px;
-    padding: 1.2rem 0;
-    font-size: 10px;
+    padding: 1.4rem 3rem;
+    font-size: 12px;
     letter-spacing: .5px;
     cursor: pointer;
     box-shadow: 0 0 3px 1px var(--color-secondary--);
@@ -243,28 +283,117 @@ h2 span, h3 span{
     max-width: 400px;
     height: auto;
     object-fit: contain;
-    padding: 1rem 0 0 1.5rem;
+}
+
+.about .page-images img{
+    padding: 0 2.5rem 0 0 ;
+}
+
+.page-labels{
+    position: absolute;
+    top: -30px;
+    left: 42.5%;
+    margin-top: 5rem;
+}
+
+.card-container{
+    max-width: 1040px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-top: 5rem;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.card-container .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(33% - 10px);
+    background: var(--background-color-secondary--);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.card p{
+    font-size: 14px;
+    text-align: justify;
+    line-height: 2.3rem;
+}
+
+.card button{
+    margin: 1rem;
 }
 
 /* Media query for first page */
 @media (min-width: 676px) { 
     .pages{
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
+        padding: 2.5rem 0;
     }
 
     nav{
         padding: 0;
     }
 
+    .texts{
+        padding: 8rem 0 0 0;
+    }
     .page-images img{
         min-width: 400px;
+    }
+
+    .about-texts{
+        padding: 15rem 0 0 0;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .home .texts, .icons, .home .page-button, .page-images img{
+    .home, .about .first-half{
         padding-left: 6rem;
     }
+}
+
+@media (max-width:1000px){
+    .card-container .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width:1000px){
+    .page-labels{
+        top: 0;
+    }
+
+    .card-container{
+        margin-top: 0;
+    }
+}
+
+@media (min-width:1400px){
+    .page-labels{
+        top: 35px;
+        left: 45%;
+    }
+}
+
+@media (max-width:600px){
+    .card-container .card{
+        width: 100%;
+    }
+
+    .page-labels {
+        left: 35%;
+    } 
+}
+
+@media (max-width:400px){
+    .page-labels {
+        left: 30%;
+    } 
 }
