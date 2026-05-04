@@ -57,6 +57,16 @@ body{
     place-items: center;
 }
 
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-color-primary--);
+    height: 100vh;
+    overflow-y: auto;
+    padding: 2rem;
+}
+
 /* Navigation Bar */
 nav{
     display: flex;
@@ -166,7 +176,7 @@ nav a{
         border: none;
     }
 
-    .contact{
+    .menu-contact{
         margin-right: 4rem;
     }
 }
@@ -404,30 +414,70 @@ h2 span, h3 span, h4 span{
 }
 
 .content .hover-icon{
-    /* background: var(--color-primary--);
-    color: var(--background-color-secondary--);
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-    padding: 2rem; */
-    /* background: red; */
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-    /* padding: 1rem; */
 }
 
-/* .portfolio-image:hover ~ p, .hover-icon{
-    display: contents;
-} */
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+}
 
-/* .hover-icon .icon{
-    width: 2rem;
-    height: 2rem;
-} */
+.contact-container .title{
+    margin: 1rem;
+}
+
+.contact-container .user-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-details .all-inputs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.all-inputs .small-input{
+    width: calc(100% / 2 - 5px);
+    margin: 5px 0;
+}
+
+.all-inputs .big-input{
+    width: calc(100%);
+    margin: 5px 0;
+}
+
+.small-input input, .big-input input{
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: var(--background-color-secondary--);
+    padding-left: 10px;
+    font-size: 13px;
+    color: var(--color-primary--);
+}
+
+.small-input input{
+    height: 45px;
+}
+
+.big-input input{
+    height: 300px;
+}
+
+.contact-container .button{
+    margin: 1rem;
+}
 
 /* Media query for first page */
-@media (min-width: 676px) { 
+@media (min-width: 676px) {
     .pages{
         display: flex;
         align-items: flex-start;
@@ -495,6 +545,13 @@ h2 span, h3 span, h4 span{
     .page-labels {
         left: 30%;
     } 
+}
+
+@media (max-width:480px){
+    .all-inputs .small-input{
+        width: calc(100%);
+        margin: 5px 0;
+    }
 }
 
 /* @media (max-width:1200px) {
