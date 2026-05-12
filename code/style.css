@@ -6,6 +6,8 @@
 }
 
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -20,8 +22,6 @@ html {
 }
 
 body{
-    margin: 0;
-    padding: 0;
     font-family: inter, Arial, Helvetica, sans-serif;
     background: var(--background-color-primary--);
     overflow-x: hidden;
@@ -68,6 +68,12 @@ body{
 }
 
 /* Navigation Bar */
+header{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
 nav{
     display: flex;
     align-items: center;
@@ -76,7 +82,6 @@ nav{
     min-height: 5rem;
     background: var(--background-color-primary--);
     padding: 0 0 5rem 0;
-    position: sticky;
 }
 
 nav a{
@@ -84,9 +89,18 @@ nav a{
 }
 
 .nav-tabs{
+    display: flex;
     width: 100%;
+    flex-direction: column;
+    transition: all 0.3s ease;
 }
-.nav-text{
+
+/* .tab {
+    position: relative;
+    z-index: 1;
+} */
+
+.nav-text a{
     font-size: 1.6rem;
     font-weight: 700;
     margin: 0 1.5rem;
@@ -97,19 +111,20 @@ nav a{
 
 .tab{
     font-size: 14px;
-    padding: 0.5rem 2rem;
-    border-bottom: 0.1rem solid #424040;
+    padding: 2rem;
     cursor: pointer;
+    flex: 1;
     background: var(--background-color-primary--);
     list-style: none;
 }
 
 .tab > a{
-        color: var(--color-primary--);
-        transition: 0.3s;
+    color: var(--color-primary--);
+    transition: 0.3s;
 }
 
-.tab > a:hover{
+.nav-tabs .tab > a:hover,
+.nav-tabs a.active{
     color: var(--color-secondary--);
 }
 
@@ -163,6 +178,7 @@ nav a{
     .nav-tabs{
         width: auto;
         display: flex;
+        flex-direction: row;
         font-size: 1.6rem;
     }
 
@@ -300,6 +316,24 @@ h2 span, h3 span, h4 span{
     max-width: 400px;
     height: auto;
     object-fit: contain;
+}
+
+.home .page-images img{
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+    0% {
+        transform: translateY(0);
+    }
+
+        50% {
+        transform: translateY(-2.4rem);
+    }
+
+        100% {
+        transform: translateY(0);
+    }
 }
 
 .about .page-images img{
@@ -452,7 +486,7 @@ h2 span, h3 span, h4 span{
     margin: 5px 0;
 }
 
-.small-input input, .big-input input{
+.small-input input, .big-input .input{
     width: 100%;
     outline: none;
     border-radius: 5px;
@@ -463,11 +497,11 @@ h2 span, h3 span, h4 span{
     color: var(--color-primary--);
 }
 
-.small-input input{
+.small-input .input{
     height: 45px;
 }
 
-.big-input input{
+.big-input .input{
     height: 300px;
 }
 
@@ -496,7 +530,7 @@ h2 span, h3 span, h4 span{
     cursor: pointer;
 }
 
-.footer-icon .page-icon{
+.footer-icon .icon{
     color: var(--background-color-primary--);
     width: 1rem;
     height: 1rem;

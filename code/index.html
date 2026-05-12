@@ -13,19 +13,35 @@
 </head>
 <body id="body">
     <header>
+        <!-- <input class="radio-input" type="radio" name="slider" id="label-home" checked>
+        <input class="radio-input" type="radio" name="slider" id="label-about" >
+        <input class="radio-input" type="radio" name="slider" id="label-services">
+        <input class="radio-input" type="radio" name="slider" id="label-portfolio">
+        <input class="radio-input" type="radio" name="slider" id="label-contact"> -->
         <nav class="nav collapsible">
-            <a href="#body"><span class="nav-text">Portfolio.</span></a>
+            <div class="nav-text">
+                <a href="#body"><span>Portfolio.</span></a>
+            </div>
 
             <svg class="nav-icon nav-toggler">
                 <use xlink:href="/images/sprite.svg#bars-solid-full"></use>
             </svg>
-
             <ul class="nav-tabs collapsible-content">
-                <li class="tab"><a href="#body">Home</a></li>
-                <li class="tab"><a href="#about">About</a></li>
-                <li class="tab"><a href="#services">Services</a></li>
-                <li class="tab"><a href="#portfolio">Portfolio</a></li>
-                <li class="tab menu-contact"><a href="#contact">Contact</a></li>
+                <li class="tab">
+                    <a href="#body" class="active">Home</a>                
+                </li>
+                <li class="tab">
+                    <a href="#about">About</a>                
+                </li>
+                <li class="tab">
+                    <a href="#services">Services</a>               
+                </li>
+                <li class="tab">
+                    <a href="#portfolio">Portfolio</a>          
+                </li>
+                <li class="tab menu-contact">
+                    <a href="#contact">Contact</a>               
+                </li>
             </ul>
         </nav>
     </header>
@@ -34,7 +50,7 @@
             <div class="texts">
                 <h3>Hello, It's Me</h3>
                 <h1>Omer Muzemil</h1>
-                <h4>And I'm a <span>Frontend Developer</span></h4>
+                <h4>And I'm a <span class="multiple-text"></span></h4>
                 <p>focused on building clean, responsive interfaces with modern web technologies.
                 I turn ideas into fast, accessible, and user-friendly digital experiences.</p>
             </div>
@@ -222,19 +238,19 @@
             <div class="user-details">
                 <div class="all-inputs">
                     <div class="small-input">
-                        <input type="text" placeholder="Full Name" required>
+                        <input class="input" type="text" placeholder="Full Name" required>
                     </div>
                     <div class="small-input">
-                        <input type="text" placeholder="Email Address" required>
+                        <input class="input" type="text" placeholder="Email Address" required>
                     </div>
                     <div class="small-input">
-                        <input type="text" placeholder="Mobile Number" required>
+                        <input class="input" type="text" placeholder="Mobile Number" required>
                     </div>
                     <div class="small-input">
-                        <input type="text" placeholder="Email Subject" required>
+                        <input class="input" type="text" placeholder="Email Subject" required>
                     </div>
                     <div class="big-input">
-                        <input type="text" placeholder="Leave Message" required>
+                        <input class="input" type="text" placeholder="Leave Message" required>
                     </div>
                 </div>
             </div>
@@ -249,12 +265,20 @@
         </div>
         <a href="#body">
             <div class="footer-icon">
-                <svg class="page-icon">
+                <svg class="icon">
                     <use xlink:href="/images/sprite.svg#up-arrow"></use>
                 </svg>         
             </div>
         </a>
     </footer>
+
+    <!-- scroll reveal -->
+     <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Typed js -->
+     <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+
+    <!-- js file link -->
     <script src="/js/main.js"></script>
 </body>
 </html>
