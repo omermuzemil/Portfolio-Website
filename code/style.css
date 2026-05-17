@@ -503,6 +503,15 @@ h2 span, h3 span, h4 span{
 
 .big-input .input{
     height: 300px;
+    position: relative;
+    padding: 15px;
+    resize: none;
+}
+
+.big-input .input::placeholder{
+    position: absolute;
+    top: 15px;
+    left: 15px;
 }
 
 .contact-container .button{
