@@ -273,8 +273,8 @@ h2 span, h3 span, h4 span{
 }
 
 .card-icon{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
 
 /* Buttons */
@@ -346,7 +346,7 @@ h2 span, h3 span, h4 span{
 }
 
 .services .title{
-    margin: 4rem 0 0 0;
+    margin: 5rem 0 0 0;
 }
 
 .card-container{
@@ -354,7 +354,7 @@ h2 span, h3 span, h4 span{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 3rem 1.5rem;
     flex-wrap: wrap;
 }
 
@@ -365,13 +365,32 @@ h2 span, h3 span, h4 span{
     width: calc(33% - 10px);
     background: var(--background-color-secondary--);
     border-radius: 10px;
-    padding: 20px;
+    border: none;
+    padding: 3rem 2rem;
+    transition: all 0.3s;
+}
+
+.card-container .card:hover{
+    border: 3px solid var(--color-secondary--);
+}
+
+.card .card-icon{
+    padding-bottom: 1rem;
+}
+
+.card .card-icon:hover{
+    cursor: default;
+}
+
+.card h4{
+    margin-bottom: 1rem;
 }
 
 .card p{
     font-size: 14px;
     text-align: justify;
     line-height: 2.3rem;
+    padding-bottom: 10px;
 }
 
 .card button{
@@ -502,8 +521,9 @@ h2 span, h3 span, h4 span{
 }
 
 .big-input .input{
-    height: 300px;
+    height: 250px;
     position: relative;
+    line-height: 1.5;
     padding: 15px;
     resize: none;
 }
@@ -592,13 +612,13 @@ h2 span, h3 span, h4 span{
     }
 }
 
-@media (min-width:1000px){
+/* @media (min-width:1000px){
     .card-container{
         height: 100vh;
         padding-bottom: 15rem;
-        /* margin-bottom: 1rem; */
+        margin-bottom: 1rem;
     }
-}
+} */
 
 @media (max-width:600px){
     .card-container .card{
