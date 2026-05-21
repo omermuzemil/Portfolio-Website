@@ -363,6 +363,7 @@ h2 span, h3 span, h4 span{
     flex-direction: column;
     align-items: center;
     width: calc(33% - 10px);
+    max-height: 380px;
     background: var(--background-color-secondary--);
     border-radius: 10px;
     border: none;
@@ -372,6 +373,9 @@ h2 span, h3 span, h4 span{
 
 .card-container .card:hover{
     border: 3px solid var(--color-secondary--);
+    font-size: 14px;
+    text-align: justify;
+    line-height: 2.3rem;
 }
 
 .card .card-icon{
@@ -391,14 +395,41 @@ h2 span, h3 span, h4 span{
     text-align: justify;
     line-height: 2.3rem;
     padding-bottom: 10px;
+    max-height: 220px;
+    overflow-y: scroll;
+
+    transition:0.4s;
 }
 
 .card button{
     margin: 1rem;
+    display: block;
+}
+
+.text.active::-webkit-scrollbar{
+    width:6px;
+}
+
+.text.active::-webkit-scrollbar-thumb{
+    background:#00e5ff;
+    border-radius:10px;
+}
+
+.see-less{
+    display:none;
+    color:#00e5ff;
+    margin-top:10px;
+    cursor:pointer;
+    text-align:center;
+    font-weight:bold;
+}
+
+.see-less.active{
+    display:block;
 }
 
 .portfolio .title{
-    margin: 3rem 0 0 0;
+    margin: 5rem 0 0 0;
 }
 
 .portfolio-container{
@@ -536,6 +567,14 @@ h2 span, h3 span, h4 span{
 
 .contact-container .button{
     margin: 1rem;
+}
+
+.contact-button button:disabled {
+    background: var(--background-color-secondary--);
+    opacity: 0.5;
+    color: var(--color-primary--);
+    cursor: not-allowed;
+    box-shadow: 0 0 7px 1px var(--color-primary--);
 }
 
 .footer{

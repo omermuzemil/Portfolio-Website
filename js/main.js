@@ -7,6 +7,26 @@ collapsibles.forEach((item) =>
   })
 );
 
+
+// Download CV
+const downloadBtn = document.getElementById("downloadCvBtn");
+
+downloadBtn.addEventListener("click", () => {
+
+    const link = document.createElement("a");
+
+    link.href = "/files/Omer-Muzemil-CV.pdf";
+
+    link.download = "Omer-Muzemil-CV.pdf";
+
+    document.body.appendChild(link);
+
+    link.click();
+
+    document.body.removeChild(link);
+
+});
+
 // tab active
 
 let sections = document.querySelectorAll('section');
@@ -50,6 +70,7 @@ ScrollReveal().reveal('.home .second-half, .services .card-container, .portfolio
 ScrollReveal().reveal('.home h1, .about .first-half', { origin: 'left' });
 ScrollReveal().reveal('.home p, .about .second-half', { origin: 'right' });
 
+
 // typed js
 
 const typed = new Typed('.multiple-text', {
@@ -59,3 +80,74 @@ const typed = new Typed('.multiple-text', {
   backdelay: 1000,
   loop: true,
 })
+
+
+// contact page send js
+emailjs.init("A5Eymo5xRJ8i1gBUQ");
+
+const sendBtn = document.getElementById("send-btn");
+const status = document.getElementById("status");
+
+const inputs = document.querySelectorAll(".input");
+
+// check fields function
+function checkFields() {
+    let allFilled = true;
+
+    inputs.forEach(input => {
+        if (!input.value.trim()) {
+            allFilled = false;
+        }
+    });
+
+    sendBtn.disabled = !allFilled;
+}
+
+// run once on page load
+checkFields();
+
+// listen for typing
+inputs.forEach(input => {
+    input.addEventListener("input", checkFields);
+});
+
+// send message
+sendBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const fullName = document.getElementById("full-name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!fullName || !email || !subject || !message) {
+        status.innerText = "Please fill all fields!";
+        status.style.color = "red";
+        return;
+    }
+
+    const params = {
+        fullName,
+        email,
+        subject,
+        message
+    };
+
+    emailjs.send(
+        "service_206jgqm",
+        "template_lm5j4ti",
+        params
+    )
+    .then(() => {
+        status.innerText = "Message sent successfully!";
+        status.style.color = "green";
+
+        // optional reset
+        inputs.forEach(input => input.value = "");
+        checkFields();
+    })
+    .catch(() => {
+        status.innerText = "Failed to send message!";
+        status.style.color = "red";
+    });
+});

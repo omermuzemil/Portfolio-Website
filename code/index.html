@@ -23,7 +23,7 @@
             </svg>
             <ul class="nav-tabs collapsible-content">
                 <li class="tab">
-                    <a href="#body" class="active">Home</a>                
+                    <a href="#home" class="active">Home</a>                
                 </li>
                 <li class="tab">
                     <a href="#about">About</a>                
@@ -72,7 +72,7 @@
                 </a>
             </div>
             <div class="page-button">
-                <button class="button">Download CV</button>
+                <button class="button" id="downloadCvBtn">Download CV</button>
             </div>
         </div>
         <div class="second-half">
@@ -111,11 +111,28 @@
                     </svg>
                 </div>
                 <h4>Web Development</h4>
-                <p>I build responsive websites using modern HTML and CSS.
-                    Experienced in JavaScript for dynamic user interfaces.
-                    Worked with APIs and backend services for real apps.
-                    Focused on performance optimization and accessibility.
-                    Collaborate using Git and follow best coding practices.</p>
+                <p class="text" id="text1">Responsive and modern web development using HTML, CSS, 
+                and basic JavaScript to build clean, structured, and 
+                user-friendly websites. Semantic HTML ensures accessibility, 
+                proper content hierarchy, and SEO-friendly structure. 
+                CSS3 techniques such as Flexbox and Grid are used to 
+                create fully responsive layouts that adapt smoothly across
+                all devices and screen.<br>
+
+                <br>Visually balanced interfaces with attention to spacing, 
+                typography, color consistency, and overall design harmony. 
+                Interactive functionality implemented with JavaScript, including 
+                navigation systems, form validation, animations, sliders, and dynamic 
+                UI behavior for improved user experience.<br>
+
+                <br>Clean, organized, and maintainable code structure for scalability
+                and future updates. Performance optimization for fast loading 
+                speed and efficient resource usage. Cross-browser compatibility 
+                across all major browsers including Chrome, Firefox, Edge, and Safari.<br>
+
+                <br>Accurate conversion of UI/UX designs into functional websites with 
+                attention to detail and precision. Modern web standards and best 
+                practices followed to ensure reliable and efficient web solutions.</p>
                 <div class="page-button about-button">
                     <button class="button">Read More</button>
                 </div>
@@ -241,25 +258,27 @@
             <div class="user-details">
                 <div class="all-inputs">
                     <div class="small-input">
-                        <input class="input" type="text" placeholder="Full Name" required>
+                        <input class="input" id="full-name" type="text" placeholder="Full Name" required>
                     </div>
                     <div class="small-input">
-                        <input class="input" type="text" placeholder="Email Address" required>
+                        <input class="input" id="email" type="text" placeholder="Email Address" required>
                     </div>
                     <div class="small-input">
-                        <input class="input" type="number" placeholder="Mobile Number" required>
+                        <input class="input" id="mobile" type="number" placeholder="Mobile Number" required>
                     </div>
                     <div class="small-input">
-                        <input class="input" type="text" placeholder="Email Subject" required>
+                        <input class="input" id="subject" type="text" placeholder="Email Subject" required>
                     </div>
                     <div class="big-input">
-                        <textarea class="input" type="text" placeholder="Leave Message" required></textarea>
+                        <textarea class="input" id="message" type="text" placeholder="Leave Message" required></textarea>
                     </div>
                 </div>
             </div>
-            <div class="page-button">
-                <button class="button">Send Message</button>
+            <div class="page-button contact-button">
+                <button class="button" id="send-btn">Send Message</button>
             </div>
+
+            <p id="status"></p>
         </div>
     </section>
     <footer class="footer">
@@ -275,6 +294,8 @@
         </a>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
     <!-- scroll reveal -->
      <script src="https://unpkg.com/scrollreveal"></script>
 
@@ -283,5 +304,6 @@
 
     <!-- js file link -->
     <script src="/js/main.js"></script>
+
 </body>
 </html>
