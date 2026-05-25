@@ -345,6 +345,56 @@ h2 span, h3 span, h4 span{
     margin-bottom: 2rem;
 }
 
+/* .about .second-half .expanded{
+    display: none;
+} */
+#about-check{
+    display: none;
+}
+
+.about .second-half .page-button{
+    position: relative;
+}
+
+.about .second-half .read-more,
+.about .second-half .read-less{
+    position: absolute;
+    inset: 0;
+
+    width: 100px;
+    height: 35px;
+    padding: 1rem 0;
+    text-align: center;
+    border-radius: 30px;
+    display: inline-block;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.read-less{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#about-check:checked ~ .page-button .read-more{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#about-check:checked ~ .page-button .read-less{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#about-check:checked ~ .expanded{
+    display: block;
+}
+
+#about-check:checked ~ .original{
+    display: none;
+}
+
 .services .title{
     margin: 5rem 0 0 0;
 }
@@ -362,8 +412,9 @@ h2 span, h3 span, h4 span{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     width: calc(33% - 10px);
-    max-height: 380px;
+    max-height: 400px;
     background: var(--background-color-secondary--);
     border-radius: 10px;
     border: none;
@@ -373,9 +424,10 @@ h2 span, h3 span, h4 span{
 
 .card-container .card:hover{
     border: 3px solid var(--color-secondary--);
-    font-size: 14px;
-    text-align: justify;
-    line-height: 2.3rem;
+}
+
+.card{
+    display: block;
 }
 
 .card .card-icon{
@@ -393,39 +445,61 @@ h2 span, h3 span, h4 span{
 .card p{
     font-size: 14px;
     text-align: justify;
+    max-height: 200px;
     line-height: 2.3rem;
-    padding-bottom: 10px;
-    max-height: 220px;
-    overflow-y: scroll;
-
+    margin-bottom: 1rem;
+    overflow-y: auto;
     transition:0.4s;
 }
 
-.card button{
-    margin: 1rem;
+.card .expanded{
+    display: none;
+}
+
+#check-1,
+#check-2,
+#check-3{
+    display: none;
+}
+
+
+.card .page-button .button{
+    width: 100px;
+    padding: 0.8rem 0;
+    text-align: center;
+    border-radius: 30px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.card .read-more{
+    z-index: 1;
+}
+
+.card .read-less{
+    position: absolute;
+    top: 91.5%;
+    left: 49%;
+    transform: translate(-49%, -91.5%);
+    opacity: 0;
+}
+
+#check-1:checked ~ .about-button .read-less,
+#check-2:checked ~ .about-button .read-less,
+#check-3:checked ~ .about-button .read-less{
+    opacity: 1;
+}
+
+#check-1:checked ~ .expanded,
+#check-2:checked ~ .expanded,
+#check-3:checked ~ .expanded{
     display: block;
 }
 
-.text.active::-webkit-scrollbar{
-    width:6px;
-}
-
-.text.active::-webkit-scrollbar-thumb{
-    background:#00e5ff;
-    border-radius:10px;
-}
-
-.see-less{
-    display:none;
-    color:#00e5ff;
-    margin-top:10px;
-    cursor:pointer;
-    text-align:center;
-    font-weight:bold;
-}
-
-.see-less.active{
-    display:block;
+#check-1:checked ~ .original,
+#check-2:checked ~ .original,
+#check-3:checked ~ .original{
+    display: none;
 }
 
 .portfolio .title{
