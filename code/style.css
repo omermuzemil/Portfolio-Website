@@ -29,7 +29,7 @@ body{
     height: 100%;
 }
 
-.home, .services{
+.home, .skills{
     background: var(--background-color-primary--);
     width: 100%;
     height: 100vh;
@@ -51,7 +51,7 @@ body{
     flex-wrap: wrap;
 }
 
-.services{
+.skills{
     position: relative;
     display: grid;
     place-items: center;
@@ -94,11 +94,6 @@ nav a{
     flex-direction: column;
     transition: all 0.3s ease;
 }
-
-/* .tab {
-    position: relative;
-    z-index: 1;
-} */
 
 .nav-text a{
     font-size: 1.6rem;
@@ -197,6 +192,8 @@ nav a{
     }
 }
 
+
+/* General codes for all pages */
 /* Typography */
 .texts{
     /* padding: 0 1.5rem; */
@@ -304,6 +301,8 @@ h2 span, h3 span, h4 span{
     box-shadow: none;
 }
 
+
+/* Home Page */
 /* Person Images */
 .page-images{
     display: flex;
@@ -336,6 +335,49 @@ h2 span, h3 span, h4 span{
     }
 }
 
+/* Media query for Home page */
+@media (min-width: 676px) {
+    .pages{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 2.5rem 0;
+    }
+
+    nav{
+        padding: 0;
+    }
+
+    .texts{
+        padding: 8rem 0 0 0;
+    }
+    .page-images img{
+        min-width: 400px;
+    }
+
+    .about-texts{
+        padding: 15rem 0 0 0;
+    }
+        .home .first-half{
+        padding-left: 1.2rem;
+    }
+}
+
+/* Media query for Home page and About page*/
+@media (min-width: 768px) {
+    .home, .about .first-half{
+        padding-left: 6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .home, .about .first-half{
+        padding-left: 1.2rem;
+    }
+}
+
+
+/* About Page */
 .about .page-images img{
     padding: 0 2.5rem 0 0 ;
 }
@@ -345,9 +387,18 @@ h2 span, h3 span, h4 span{
     margin-bottom: 2rem;
 }
 
-/* .about .second-half .expanded{
+.second-half h4{
+    padding-top: 0.5rem;
+}
+
+.about .second-half .texts{
+    line-height: 1.8rem;
+}
+
+.about .second-half .texts .expanded{
     display: none;
-} */
+}
+
 #about-check{
     display: none;
 }
@@ -387,15 +438,17 @@ h2 span, h3 span, h4 span{
     pointer-events: auto;
 }
 
-#about-check:checked ~ .expanded{
+#about-check:checked ~ .texts .expanded{
     display: block;
 }
 
-#about-check:checked ~ .original{
+#about-check:checked ~ .texts .original{
     display: none;
 }
 
-.services .title{
+
+/* Skills Page */
+.skills .title{
     margin: 5rem 0 0 0;
 }
 
@@ -502,6 +555,22 @@ h2 span, h3 span, h4 span{
     display: none;
 }
 
+/* Media query for Skills page */
+@media (max-width:1000px){
+    .card-container .card{
+        width: calc(50% - 10px);
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width:600px){
+    .card-container .card{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Portfolio Page */
 .portfolio .title{
     margin: 5rem 0 0 0;
 }
@@ -544,7 +613,6 @@ h2 span, h3 span, h4 span{
     background: linear-gradient(180deg, transparent, rgba(2, 238, 254, 1));
     transition: all 0.3s ;
     border-radius: 20px;
-    cursor: pointer;
 }
 
 .portfolio-image .content:hover{
@@ -574,8 +642,24 @@ h2 span, h3 span, h4 span{
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
+    cursor: pointer;
 }
 
+/* Media query for Portfolio page */
+@media (min-width:768px) {
+    .portfolio-container{
+        margin: 4rem 2.4rem;
+    }
+}
+
+@media (min-width:1300px) {
+    .portfolio-container{
+        grid-template-columns: repeat(3, 405px);
+        margin: 4.25;
+    }
+}
+
+/* Contact Page */
 .contact-container{
     display: flex;
     flex-direction: column;
@@ -651,6 +735,15 @@ h2 span, h3 span, h4 span{
     box-shadow: 0 0 7px 1px var(--color-primary--);
 }
 
+/* Media query for Contact page */
+@media (max-width:480px){
+    .all-inputs .small-input{
+        width: calc(100%);
+        margin: 5px 0;
+    }
+}
+
+/* Footer */
 .footer{
     display: flex;
     background: var(--background-color-secondary--);
@@ -678,88 +771,7 @@ h2 span, h3 span, h4 span{
     height: 1rem;
 }
 
-/* Media query for first page */
-@media (min-width: 676px) {
-    .pages{
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        padding: 2.5rem 0;
-    }
-
-    nav{
-        padding: 0;
-    }
-
-    .texts{
-        padding: 8rem 0 0 0;
-    }
-    .page-images img{
-        min-width: 400px;
-    }
-
-    .about-texts{
-        padding: 15rem 0 0 0;
-    }
-        .home .first-half{
-        padding-left: 1.2rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .home, .about .first-half{
-        padding-left: 6rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .home, .about .first-half{
-        padding-left: 1.2rem;
-    }
-}
-
-@media (max-width:1000px){
-    .card-container .card{
-        width: calc(50% - 10px);
-        margin-bottom: 2rem;
-    }
-}
-
-/* @media (min-width:1000px){
-    .card-container{
-        height: 100vh;
-        padding-bottom: 15rem;
-        margin-bottom: 1rem;
-    }
-} */
-
-@media (max-width:600px){
-    .card-container .card{
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-}
-
-@media (min-width:768px) {
-    .portfolio-container{
-        margin: 4rem 2.4rem;
-    }
-}
-
-@media (min-width:1300px) {
-    .portfolio-container{
-        grid-template-columns: repeat(3, 405px);
-        margin: 4.25;
-    }
-}
-
-@media (max-width:480px){
-    .all-inputs .small-input{
-        width: calc(100%);
-        margin: 5px 0;
-    }
-}
-
+/* Media quer for Footer */
 @media (max-width:768px){
     .footer{
         padding: 1.5rem 1.2rem;
