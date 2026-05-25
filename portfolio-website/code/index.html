@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/images/page-icon.png">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body id="body">
+
+    <!-- Navigation bar(Task bar) -->
+    <header>
+        <nav class="nav collapsible">
+            <div class="nav-text">
+                <a href="#body"><span>Portfolio.</span></a>
+            </div>
+
+            <svg class="nav-icon nav-toggler">
+                <use xlink:href="/images/sprite.svg#bars-solid-full"></use>
+            </svg>
+            <ul class="nav-tabs collapsible-content">
+                <li class="tab">
+                    <a href="#home" class="active">Home</a>                
+                </li>
+                <li class="tab">
+                    <a href="#about">About</a>                
+                </li>
+                <li class="tab">
+                    <a href="#skills">Skills</a>               
+                </li>
+                <li class="tab">
+                    <a href="#portfolio">Portfolio</a>          
+                </li>
+                <li class="tab menu-contact">
+                    <a href="#contact">Contact</a>               
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <section class="pages home" id="home">
+        <div class="first-half">
+            <div class="texts">
+                <h3>Hello, It's Me</h3>
+                <h1>Omer Muzemil</h1>
+                <h4>And I'm a <span class="multiple-text"></span></h4>
+                <p>I specialize in building clean, modern, and fully responsive user interfaces using today’s web technologies.
+                    My focus is on creating smooth, fast, and visually appealing digital experiences.
+                    I transform ideas into practical, user-friendly applications that work across all devices.
+                    With attention to detail, I ensure accessibility, performance, and a seamless user experience.</p>
+            </div>
+            <div class="icons">
+                <a href="https://github.com/omermuzemil">
+                    <svg class="page-icon circled-icon">
+                        <use xlink:href="/images/sprite.svg#github"></use>
+                    </svg>
+                </a>
+                <a href="https://leetcode.com/u/omer-muzemil_123/">
+                    <svg class="page-icon circled-icon">
+                        <use xlink:href="/images/sprite.svg#leetcode"></use>
+                    </svg>
+                </a>
+                <a href="https://www.youtube.com/@codingwithpython6025">
+                    <svg class="page-icon circled-icon">
+                        <use xlink:href="/images/sprite.svg#youtube"></use>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/omer-muzemil-a5a37a276/">
+                    <svg class="page-icon circled-icon">
+                        <use xlink:href="/images/sprite.svg#linkedin"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="page-button">
+                <button class="button" id="downloadCvBtn">Download CV</button>
+            </div>
+        </div>
+        <div class="second-half">
+            <div class="page-images">
+                <img src="/images/image-1.png" alt="second image">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Page -->
+    <section class="pages about" id="about">
+        <div class="first-half">
+            <div class="page-images">
+                <img src="/images/image-2.png" alt="second image">
+            </div>
+        </div>
+        <div class="second-half">
+            <input type="checkbox" id="about-check">
+            <div class="texts about-texts">
+                <h2>About <span>Me</span></h2>
+                <h4>Frontend Developer!</h4>
+                <p class="original">I am a passionate front-end developer with a strong interest in designing 
+                    and building modern websites and interactive web applications. I enjoy 
+                    turning ideas into visually appealing, responsive, and user-friendly 
+                    digital experiences using core web technologies such as HTML, CSS, and 
+                    JavaScript. I focus on writing clean and efficient code while continuously 
+                    improving my design sense and problem-solving skills.<span>...</span></p>
+
+                <p class="expanded">I am a passionate front-end developer with a strong interest in designing 
+                    and building modern websites and interactive web applications. I enjoy 
+                    turning ideas into visually appealing, responsive, and user-friendly 
+                    digital experiences using core web technologies such as HTML, CSS, and 
+                    JavaScript. I focus on writing clean and efficient code while continuously 
+                    improving my design sense and problem-solving skills.<br>
+                    
+                    <br>Currently, I am a first-year student at Hope University College in Addis Ababa, 
+                    where I am building a strong foundation in computer science and software development. 
+                    Alongside my studies, I actively practice web development by working on small projects 
+                    that help me sharpen my skills and explore new concepts.<br>
+
+                    <br>I am highly motivated to grow in the field of front-end development and aim 
+                    to become a professional developer capable of creating impactful digital solutions. 
+                    I am also interested in learning modern frameworks and tools to expand my capabilities 
+                    and stay updated with industry standards.</p>
+            </div>
+            <div class="page-button about-button">
+                <label for="about-check" class="button read-more">Read More</label>
+                <label for="about-check" class="button read-less">Read Less</label>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Page -->
+    <section class="skills" id="skills">
+        <div class="title">
+            <h3>My <span>Skills</span></h3>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <input type="checkbox" id="check-1">
+                <div class="icons">
+                    <svg class="page-icon card-icon">
+                        <use xlink:href="/images/sprite.svg#code"></use>
+                    </svg>
+                </div>
+                <h4>Web Development</h4>
+                <p class="original">Responsive and modern web development using HTML, CSS, 
+                and basic JavaScript to build clean, structured, and 
+                user-friendly websites. Semantic HTML ensures accessibility, 
+                proper content hierarchy, and SEO-friendly structure. 
+                CSS3 techniques such as Flexbox and Grid are used to 
+                create <span> ...</span></p> 
+
+                <p class="expanded">Responsive and modern web development using HTML, CSS, 
+                and basic JavaScript to build clean, structured, and 
+                user-friendly websites. Semantic HTML ensures accessibility, 
+                proper content hierarchy, and SEO-friendly structure. 
+                CSS3 techniques such as Flexbox and Grid are used to 
+                create fully responsive layouts that adapt smoothly across
+                all devices and screen.<br>
+
+                <br>Visually balanced interfaces with attention to spacing, 
+                typography, color consistency, and overall design harmony. 
+                Interactive functionality implemented with JavaScript, including 
+                navigation systems, form validation, animations, sliders, and dynamic 
+                UI behavior for improved user experience.<br>
+
+                <br>Clean, organized, and maintainable code structure for scalability
+                and future updates. Performance optimization for fast loading 
+                speed and efficient resource usage. Cross-browser compatibility 
+                across all major browsers including Chrome, Firefox, Edge, and Safari.<br>
+
+                <br>Accurate conversion of UI/UX designs into functional websites with 
+                attention to detail and precision. Modern web standards and best 
+                practices followed to ensure reliable and efficient web solutions.</p>
+                <div class="page-button about-button">
+                    <label for="check-1" class="button read-more">Read More</label>
+                    <label for="check-1" class="button read-less">Read Less</label>
+                </div>
+            </div>
+            <div class="card">
+                <input type="checkbox" id="check-2">
+                <div class="icons">
+                    <svg class="page-icon card-icon">
+                        <use xlink:href="/images/sprite.svg#python"></use>
+                    </svg>
+                </div>
+                <h4>Python Programming</h4>
+                <p class="original">Python programming focused on building practical and interactive 
+                    applications using core Python concepts and standard libraries. Using Tkinter, 
+                    I developed simple graphical user interface projects such as a functional 
+                    calculator, applying event-driven programming, widgets, and basic logic 
+                    handling to create a clean<span> ...</span></p> 
+
+                <p class="expanded">Python programming focused on building practical and interactive 
+                    applications using core Python concepts and standard libraries. Using Tkinter, 
+                    I developed simple graphical user interface projects such as a functional 
+                    calculator, applying event-driven programming, widgets, and basic logic 
+                    handling to create a clean and user-friendly desktop application. These 
+                    projects helped strengthen my understanding of Python fundamentals and 
+                    GUI development.<br>
+
+                    <br>In addition, I used the Turtle graphics library to create various drawings and 
+                    visual patterns, exploring loops, functions, and coordinate-based movement. 
+                    This improved my logical thinking and creativity in programming, allowing me 
+                    to transform code into visual outputs. Through these exercises, I gained a 
+                    better grasp of control flow, algorithmic thinking, and Python’s ability to 
+                    generate interactive visuals.<br>
+
+                    <br>I also practiced problem-solving on platforms like LeetCode, where I worked on 
+                    algorithmic challenges involving arrays, strings, loops, and basic data structures. 
+                    These exercises improved my coding efficiency, debugging skills, and understanding 
+                    of computational thinking. Overall, this experience strengthened my ability to write 
+                    clean, structured, and logical Python code for both projects and problem-solving 
+                    scenarios.</p>
+                <div class="page-button about-button">
+                    <label for="check-2" class="button read-more">Read More</label>
+                    <label for="check-2" class="button read-less">Read Less</label>
+                </div>
+            </div>
+            <div class="card cyber-security-card">
+                <input type="checkbox" id="check-3">
+                <div class="icons">
+                    <svg class="page-icon card-icon">
+                        <use xlink:href="/images/sprite.svg#cyber-security"></use>
+                    </svg>
+                </div>
+                <h4>Cyber Security</h4>
+                <p class="original">My interest in this area began with building a simple 
+                password strength checker, where I analyzed password complexity 
+                based on length, character variety, and security rules. This project 
+                helped me understand the importance of strong authentication and the 
+                basic principles of securing user data<span> ...</span></p> 
+
+                <p class="expanded">My interest in this area began with building a simple 
+                    password strength checker, where I analyzed password complexity 
+                    based on length, character variety, and security rules. This project 
+                    helped me understand the importance of strong authentication and the 
+                    basic principles of securing user data.<br>
+
+                    <br>Alongside practical work, I have started taking introductory courses in 
+                    Cyber Security to build a strong theoretical foundation. These courses 
+                    have introduced me to key concepts such as encryption, common attack 
+                    types, system vulnerabilities, and safe online practices. Learning 
+                    these fundamentals has helped me understand how real-world security 
+                    systems are designed and maintained.<br>
+
+                    <br>I am highly motivated to further explore this field and deepen my 
+                    knowledge through hands-on practice and continuous learning. My goal 
+                    is to develop strong skills in identifying and preventing security 
+                    risks while understanding how to build safer digital systems. I am 
+                    eager to grow within this field and contribute to creating more secure 
+                    and reliable technological environments.</p>
+                <div class="page-button about-button">
+                    <label for="check-3" class="button read-more">Read More</label>
+                    <label for="check-3" class="button read-less">Read Less</label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Page -->
+    <section class="portfolio" id="portfolio">
+        <div class="title">
+            <h3>Latest <span>Project</span></h3>
+        </div>
+        <div class="portfolio-container">
+            <div class="portfolio-image">
+                <img class="image" src="/images/portfolio1.jpg" alt="portfolio-first-image">
+                <div class="content">
+                    <span>Web Projects</span>
+                    <p>Essential responsive components for websites.</p>
+                    <a href="https://github.com/omermuzemil/Web-Projects-HTML-and-CSS/tree/main/training-projects">
+                        <div class="icon-container">
+                            <svg class="hover-icon">
+                                <use xlink:href="/images/sprite.svg#open-in-new-window"></use>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div> 
+            <div class="portfolio-image"> 
+                <img class="image" src="/images/portfolio2.jpg" alt="portfolio-second-image"> 
+                <div class="content">
+                    <span>Python Turtle Projects</span>
+                    <p>Easy drawings using python turtle library.</p>
+                    <a href="https://github.com/omermuzemil/Python-Projects/tree/main/python-projects/turtle-projects/turtle-drawing-projects">
+                        <div class="icon-container">
+                            <svg class="hover-icon">
+                                <use xlink:href="/images/sprite.svg#open-in-new-window"></use>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div> 
+            <div class="portfolio-image"> 
+                <img class="image" src="/images/portfolio3.jpg" alt="portfolio-third-image"> 
+                <div class="content">
+                    <span>Python Tkinter Project</span>
+                    <p>Simple calculator using python tkinter library.</p>
+                    <a href="https://github.com/omermuzemil/Python-Projects/tree/main/python-projects/tkinter-projects/simple_calculator">
+                        <div class="icon-container">
+                            <svg class="hover-icon">
+                                <use xlink:href="/images/sprite.svg#open-in-new-window"></use>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div> 
+            <div class="portfolio-image"> 
+                <img class="image" src="/images/portfolio4.jpg" alt="portfolio-fourth-image"> 
+                <div class="content">
+                    <span>Game</span>
+                    <p>Simple snake game using python turtle library.</p>
+                    <a href="https://github.com/omermuzemil/Python-Projects/tree/main/python-projects/turtle-projects/games/simple_snake_game">
+                        <div class="icon-container">
+                            <svg class="hover-icon">
+                                <use xlink:href="/images/sprite.svg#open-in-new-window"></use>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div> 
+            <div class="portfolio-image"> 
+                <img class="image" src="/images/portfolio5.jpg" alt="portfolio-fivth-image"> 
+                <div class="content">
+                    <span>Cyber Security</span>
+                    <p>Password Strength checker using python tkinter library.</p>
+                    <a href="https://github.com/omermuzemil/Python-Projects/tree/main/python-projects/tkinter-projects/password-strength-checker">
+                        <div class="icon-container">
+                            <svg class="hover-icon">
+                                <use xlink:href="/images/sprite.svg#open-in-new-window"></use>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div> 
+            <div class="portfolio-image"> 
+                <img class="image" src="/images/portfolio6.jpg" alt="portfolio-six-image">           
+                <div class="content">
+                    <span>Cyber Security</span>
+                    <p>On going Project...</p>
+                    <a href="https://github.com/omermuzemil/Python-Projects/tree/main/python-projects/tkinter-projects/login-authentication">
+                        <div class="icon-container">
+                            <svg class="hover-icon">
+                                <use xlink:href="/images/sprite.svg#open-in-new-window"></use>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div> 
+        </div> 
+    </section>
+
+    <!-- Contact Page -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="page-labels title">
+                <h3>Contact<span> Me!</span></h3>
+            </div>
+            <div class="user-details">
+                <div class="all-inputs">
+                    <div class="small-input">
+                        <input class="input" id="full-name" type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="small-input">
+                        <input class="input" id="email" type="text" placeholder="Email Address" required>
+                    </div>
+                    <div class="small-input">
+                        <input class="input" id="mobile" type="number" placeholder="Mobile Number" required>
+                    </div>
+                    <div class="small-input">
+                        <input class="input" id="subject" type="text" placeholder="Email Subject" required>
+                    </div>
+                    <div class="big-input">
+                        <textarea class="input" id="message" type="text" placeholder="Leave Message" required></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="page-button contact-button">
+                <button class="button" id="send-btn">Send Message</button>
+            </div>
+
+            <p id="status"></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            <span>Copyright © 2026 by Coding with Python | All rights reserved.</span>
+        </div>
+        <a href="#body">
+            <div class="footer-icon">
+                <svg class="icon">
+                    <use xlink:href="/images/sprite.svg#up-arrow"></use>
+                </svg>         
+            </div>
+        </a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- scroll reveal -->
+     <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Typed js -->
+     <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+
+    <!-- js file link -->
+    <script src="/js/main.js"></script>
+
+</body>
+</html>
